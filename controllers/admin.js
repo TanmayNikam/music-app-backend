@@ -24,6 +24,7 @@ exports.addSong = async (req, res) => {
             album: req.body.album,
             duration: req.body.duration,
             year: req.body.year,
+            lyrics: req.body.lyrics,
           });
           await newSong.save();
           const allSongs = await Song.find();
@@ -60,6 +61,7 @@ exports.editSong = async (req, res) => {
       album: req.body.album,
       duration: req.body.duration,
       year: req.body.year,
+      lyrics: req.body.lyrics,
     });
     const allSongs = await Song.find();
     res.status(200).json({

@@ -26,6 +26,9 @@ const songsSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
+    lyrics: {
+      type: String,
+    },
   },
   {
     timeStamps: true,
