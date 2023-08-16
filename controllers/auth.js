@@ -109,3 +109,21 @@ exports.getUser = async (req, res) => {
     errorHandling(res, error, "User");
   }
 };
+
+exports.isAdmin = (req, res, next) => {
+  try {
+    if (req.user) {
+      if (req.user.isAdmin) next();
+    }
+    return res.status(401).json({
+      message: "Unauthorized",
+      success: false,
+    });
+  } catch (error) {
+    console.log(error);
+    return res.status(401).json({
+      message: "Unauthorized",
+      success: false,
+    });
+  }
+};

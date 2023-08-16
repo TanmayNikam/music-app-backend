@@ -18,17 +18,30 @@ const songsSchema = new mongoose.Schema(
       type: Number,
       required: true,
     },
-    src: {
-      type: String,
-      required: true,
-    },
-    duration: {
-      type: String,
-      required: true,
-    },
-    lyrics: {
+    fileName: {
       type: String,
     },
+    fileId: {
+      type: String,
+    },
+    // src: {
+    //   type: String,
+    //   required: true,
+    // },
+
+    // duration: {
+    //   type: String,
+    //   required: true,
+    // },
+    // lyrics: {
+    //   type: String,
+    // },
+    // filename: {
+    //   type: String,
+    // },
+    // mimetype: {
+    //   type: String,
+    // },
   },
   {
     timeStamps: true,

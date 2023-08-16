@@ -64,7 +64,6 @@ exports.editPlaylist = async (req, res) => {
 exports.deletePlaylist = async (req, res) => {
   try {
     const user = req.user;
-    console.log(req);
     const newPlaylist = user.playlists.filter(
       (el) => el.name !== req.body.name
     );
